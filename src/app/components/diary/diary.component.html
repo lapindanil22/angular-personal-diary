@@ -1,0 +1,28 @@
+<button pButton class="mt-2 ml-2" routerLink="/home" type="button" label="Home"></button>
+<button pButton class="mt-2 ml-2" routerLink="/diary/add" type="button" label="Add new note"></button>
+
+<div class="flex mb-4 justify-content-center" *ngFor="let note of notes">
+  <p-card [style]="{width: '720px'}" styleClass="p-card-shadow">
+    <p [innerHTML]="note.content"></p>
+    <p-divider></p-divider>
+    <p><b>Last updated:</b> {{ note.date.toDate() | date : "h:mm a, MMM d, y" }}</p>
+    <ng-template pTemplate="footer">
+      <p-button [routerLink]="'/diary/edit/' + note.id" label="Edit" icon="pi pi-pencil" styleClass="p-button-sm"></p-button>
+      <p-button (click)="onClickDelete(note)" label="Delete" icon="pi pi-times" styleClass="p-button-sm" [style]="{'margin-left': '.5em'}"></p-button>
+    </ng-template>
+  </p-card>
+</div>
+
+<!--<p-card header="Advanced Card" subheader="Card Subheader" [style]="{width: '360px'}" styleClass="p-card-shadow">-->
+<!--  <p>Lorem ipsum dolor sit amet</p>-->
+<!--  <ng-template pTemplate="footer">-->
+<!--    <p-button label="Edit" icon="pi pi-check" styleClass="p-button-sm"></p-button>-->
+<!--    <p-button label="Delete" icon="pi pi-times" styleClass="p-button-sm" [style]="{'margin-left': '.5em'}"></p-button>-->
+<!--  </ng-template>-->
+<!--</p-card>-->
+
+<!--<div class="surface-card p-4 shadow-2 border-round">-->
+<!--  <div class="text-3xl font-medium text-900 mb-3">Card Title</div>-->
+<!--  <div class="font-medium text-500 mb-3">Vivamus id nisl interdum, blandit augue sit amet, eleifend mi.</div>-->
+<!--  <div style="height: 150px" class="border-2 border-dashed surface-border"></div>-->
+<!--</div>-->

@@ -1,0 +1,20 @@
+<button pButton class="mt-2 ml-2" routerLink="/home" type="button" label="Home"></button>
+
+<form class="w-[700px]" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="flex flex-column align-items-center w-6 mb-2">
+    <p class="mt-6 font-bold text-xl">New note</p>
+<!--    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores beatae, consequatur illo iusto libero magni molestias nulla officiis optio possimus ratione sit totam vitae! Accusantium aperiam doloribus, eaque eligendi enim, est fuga inventore iure laudantium, molestiae molestias mollitia obcaecati perferendis quae suscipit veniam voluptate. Delectus harum iste laboriosam natus voluptates.</p>-->
+    <p-editor formControlName="content" [style]="{'height':'320px'}">
+      <ng-template pTemplate="header">
+      <span class="ql-formats">
+          <button type="button" class="ql-bold" aria-label="Bold"></button>
+          <button type="button" class="ql-italic" aria-label="Italic"></button>
+          <button type="button" class="ql-underline" aria-label="Underline"></button>
+      </span>
+      </ng-template>
+    </p-editor>
+  </div>
+
+  <button pButton class="mt-2 ml-2" routerLink="/diary" type="button" label="Cancel"></button>
+  <button pButton class="mt-2 ml-2" type="submit" value="Submit" label="Submit"></button>
+</form>

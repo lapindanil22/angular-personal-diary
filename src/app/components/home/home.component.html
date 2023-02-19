@@ -1,0 +1,17 @@
+<button pButton class="mt-2 ml-2" *ngIf="!(angularFireAuth.user | async)" routerLink="/login" type="button"
+        label="Sign In"></button>
+<button pButton class="mt-2 ml-2" *ngIf="angularFireAuth.user | async" (click)="logout()" type="button"
+        label="Sign Out"></button>
+<button pButton class="mt-2 ml-2" type="button" routerLink="/diary" label="Diary"></button>
+
+<!--<button *ngIf="!(angularFireAuth.user | async)" routerLink="/login">Login</button>-->
+<!--<button *ngIf="angularFireAuth.user | async" (click)="logout()">Logout</button>-->
+<!--<button routerLink="/diary">Diary</button>-->
+
+<!--<div *ngIf="angularFireAuth.user | async">-->
+<!--  You are logged in-->
+<!--</div>-->
+
+<!--<div *ngIf="!(angularFireAuth.user | async)">-->
+<!--  You are NOT logged in-->
+<!--</div>-->
