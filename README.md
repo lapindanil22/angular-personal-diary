@@ -18,6 +18,12 @@ Creating, editing, deleting notes, formatting the text of the notes, authorizing
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
+## Accounts
+
+1@mail.com - 123456
+
+2@mail.com - 234567
+
 ## Build
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
