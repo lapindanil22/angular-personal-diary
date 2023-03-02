@@ -22,6 +22,7 @@ import {CheckboxModule} from "primeng/checkbox";
 import {RippleModule} from "primeng/ripple";
 import {CardModule} from "primeng/card";
 import {DividerModule} from "primeng/divider";
+import { NavigationComponent } from './components/navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import {DividerModule} from "primeng/divider";
     LoginComponent,
     DiaryComponent,
     AddNoteComponent,
-    EditNoteComponent
+    EditNoteComponent,
+    NavigationComponent
   ],
   imports: [
     BrowserModule,
